@@ -122,7 +122,7 @@ extern "C" void Wrapper_StopScroll()
 	extDisplay->stopscroll();
 }
 
-extern "C" void Wrapper_Print(const char * string)
+extern "C" void Wrapper_Print(const char * string) // IMPORTANT ONE
 {
 	extDisplay->print(string);
 }
