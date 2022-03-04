@@ -271,6 +271,16 @@ bool UMission::mission1(int & state)
         printf("mission ended\n");
       }
       break;
+    case 20:
+      snprintf(lines[0], MAX_LEN, "vel=0.5:dist=1");
+      missionSendAndRun(lineList, 1);
+      state = 21;
+      break;
+    case 21:
+      snprintf(lines[0], MAX_LEN, "tr=0:turn=90");
+      snprintf(lines[1], MAX_LEN, "vel=0.3:dist=0.5");
+      missionSendAndRun(lineList, 2);
+      state = 30; 
     case 999:
     default:
       finished = true;
